@@ -27,14 +27,14 @@ function HousiePlay() {
   };
 
   return (
-    <div>
+    <div className="mt-10 mx-8">
       {tickets.map((_, index) => (
         <TicketCard key={index} idx={index} />
       ))}
       <div className="my-4 flex flex-col items-center justify-start">
         <input
           type="number"
-          className="w-48 p-2 border bg-gray-500 rounded-md text-5xl"
+          className="w-48 text-center p-2 border bg-transparent rounded-md text-5xl"
           value={newConfirmedNumber}
           onChange={(e) => setNewConfirmedNumber(parseInt(e.target.value))}
         />
