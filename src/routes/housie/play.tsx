@@ -9,7 +9,7 @@ export const Route = createFileRoute("/housie/play")({
 });
 
 function HousiePlay() {
-  const { tickets, addConfirmedNumber } = useHousieStore();
+  const { tickets, addConfirmedNumber, reset } = useHousieStore();
   const router = useRouter();
   const [newConfirmedNumber, setNewConfirmedNumber] = useState<number>(1);
 
@@ -44,6 +44,16 @@ function HousiePlay() {
           className="mt-4 rounded-md bg-indigo-600 px-5 py-4 text-3xl font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
         >
           Add Number
+        </button>
+        <button
+          onDoubleClick={() => {
+            reset();
+            router.navigate({ to: "/housie/create" });
+          }}
+          type="button"
+          className="mt-4 rounded-md bg-rose-600 px-5 py-4 text-3xl font-semibold text-white shadow-sm hover:bg-rose-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-500"
+        >
+          Reset
         </button>
       </div>
     </div>
