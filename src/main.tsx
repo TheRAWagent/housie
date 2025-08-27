@@ -31,10 +31,8 @@ if (!rootElement.innerHTML) {
   const root = ReactDOM.createRoot(rootElement)
   root.render(
     <StrictMode>
-      <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl={'/'} appearance={{baseTheme: dark}}>
       <Toaster />
       <RouterProvider router={router} />
-      </ClerkProvider>
     </StrictMode>,
   )
 }
