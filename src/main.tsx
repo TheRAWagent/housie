@@ -1,9 +1,7 @@
   import { StrictMode } from 'react'
   import ReactDOM from 'react-dom/client'
   import { RouterProvider, createRouter } from '@tanstack/react-router'
-  import { ClerkProvider } from '@clerk/clerk-react'
   import { Toaster } from 'react-hot-toast'
-  import { dark } from '@clerk/themes'
   import './index.css'
   
   // Import the generated route tree
